@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CablePlus - Servicios de Internet y TV</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #003366;
+            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+        }
+        header {
+            background-color: #008037;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            transition: background-color 0.5s ease-in-out;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        nav ul li a:hover {
+            color: #00aaff;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        section:hover {
+            transform: scale(1.02);
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #008037;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            transition: background-color 0.5s ease-in-out;
+        }
+        .tarifas {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .tarifa {
+            background: linear-gradient(135deg, #008037, #00aaff);
+            color: white;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+            text-align: center;
+            width: 150px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .tarifa:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CablePlus</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#promociones">Promociones</a></li>
+                <li><a href="#soporte">Soporte</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="inicio">
+        <h2>Bienvenido a CablePlus</h2>
+        <p>Tu mejor opción en servicios de Internet y Televisión en Costa Rica.</p>
+    </section>
+    
+    <section id="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="tarifas">
+            <div class="tarifa">20 MB<br>₡15,000</div>
+            <div class="tarifa">30 MB<br>₡20,000</div>
+            <div class="tarifa">50 MB<br>₡21,300</div>
+            <div class="tarifa">75 MB<br>₡22,900</div>
+            <div class="tarifa">150 MB<br>₡24,900</div>
+        </div>
+    </section>
+    
+    <section id="promociones">
+        <h2>Promociones</h2>
+        <p>Televisión por fibra óptica <strong>GRATIS</strong> por tiempo limitado.</p>
+    </section>
+    
+    <section id="soporte">
+        <h2>Soporte Técnico</h2>
+        <p>Encuentra ayuda y respuestas a tus consultas.</p>
+    </section>
+    
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p><strong>Teléfonos:</strong></p>
+        <p>2716 6000 | 2716 5038 | 4404 4635</p>
+        <p><strong>WhatsApp:</strong> 7275 6074</p>
+        <p><strong>Dirección:</strong> Limón, Guácimo, Guácimo centro, costado oeste de Importadora Monge o bien, detrás de la Musmani.</p>
+        <p><strong>Ubicación:</strong> <a href="https://maps.app.goo.gl/VLgr9GH32wvAeTVx6" target="_blank">Ver en Google Maps</a></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 CablePlus - Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
