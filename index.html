@@ -20,10 +20,15 @@
             margin: 0;
             background: #f8f9fa;
             color: #333;
-            padding-top: 110px; /* Espacio para el header fijo */
+            padding-top: 110px;
         }
 
+        /* HEADER FIJADO PARA TODOS LOS DISPOSITIVOS */
         header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
             background: var(--degradado-header);
             color: white;
             padding: 15px 5%;
@@ -31,10 +36,6 @@
             align-items: center;
             justify-content: space-between;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
             transition: all 0.3s ease;
         }
 
@@ -367,6 +368,7 @@
             header {
                 flex-direction: column;
                 text-align: center;
+                padding: 10px 5%;
             }
             
             header h1 {
@@ -443,269 +445,9 @@
             </div>
         </section>
 
-        <section id="servicios">
-            <h2>Nuestros Servicios</h2>
-            
-            <h3 style="text-align: center; color: var(--azul); margin-bottom: 20px;">Internet Fibra Óptica</h3>
-            <div class="contenedor-servicios">
-                <!-- Tarjetas individuales para cada paquete de Internet -->
-                <div class="tarjeta-servicio tarjeta-1">
-                    <h3>Internet Básico</h3>
-                    <div class="velocidad">10 MB</div>
-                    <div class="precio">₡12,500</div>
-                    <ul class="beneficios">
-                        <li><i class="fas fa-check"></i> Conexión básica</li>
-                        <li><i class="fas fa-check"></i> Un dispositivo</li>
-                        <li><i class="fas fa-check"></i> Conlleva costo de insalación</li>
-                    </ul>
-                    <button class="btn-contratar">Contratar</button>
-                </div>
-                
-                <div class="tarjeta-servicio tarjeta-2">
-                    <h3>Internet Estándar</h3>
-                    <div class="velocidad">20 MB</div>
-                    <div class="precio">₡17,500</div>
-                    <ul class="beneficios">
-                        <li><i class="fas fa-check"></i> Conexión estable</li>
-                        <li><i class="fas fa-check"></i> Dos dispositivos</li>
-                        <li><i class="fas fa-check"></i> Conlleva costo de instalación</li>
-                    </ul>
-                    <button class="btn-contratar">Contratar</button>
-                </div>
-                
-                <div class="tarjeta-servicio tarjeta-3">
-                    <h3>Internet Avanzado</h3>
-                    <div class="velocidad">30 MB</div>
-                    <div class="precio">₡20,000</div>
-                    <ul class="beneficios">
-                        <li><i class="fas fa-check"></i> Conexión estable</li>
-                        <li><i class="fas fa-check"></i> Descargas</li>
-                        <li><i class="fas fa-check"></i> Instalación gratis</li>
-                    </ul>
-                    <button class="btn-contratar">Contratar</button>
-                </div>
-                
-                <div class="tarjeta-servicio tarjeta-4 destacado">
-                    <div class="etiqueta-promo">Popular</div>
-                    <h3>Internet Premium</h3>
-                    <div class="velocidad">50 MB</div>
-                    <div class="precio">₡21,300</div>
-                    <ul class="beneficios">
-                        <li><i class="fas fa-check"></i> Teletrabajo</li>
-                        <li><i class="fas fa-check"></i> Streaming</li>
-                        <li><i class="fas fa-check"></i> Instalación gratis</li>
-                    </ul>
-                    <button class="btn-contratar">Contratar</button>
-                </div>
-                
-                <div class="tarjeta-servicio tarjeta-5">
-                    <h3>Internet Ultra</h3>
-                    <div class="velocidad">75 MB</div>
-                    <div class="precio">₡22,900</div>
-                    <ul class="beneficios">
-                        <li><i class="fas fa-check"></i> Conexión más fluida</li>
-                        <li><i class="fas fa-check"></i> Streaming</li>
-                        <li><i class="fas fa-check"></i> Instalación gratis</li>
-                    </ul>
-                    <button class="btn-contratar">Contratar</button>
-                </div>
-                
-                <div class="tarjeta-servicio tarjeta-6 destacado">
-                    <div class="etiqueta-promo">Recomendado</div>
-                    <h3>Internet Mega</h3>
-                    <div class="velocidad">150 MB</div>
-                    <div class="precio">₡24,900</div>
-                    <ul class="beneficios">
-                        <li><i class="fas fa-check"></i> Conexión estable</li>
-                        <li><i class="fas fa-check"></i> Juegos en línea</li>
-                        <li><i class="fas fa-check"></i> Instalación gratis</li>
-                    </ul>
-                    <button class="btn-contratar">Contratar</button>
-                </div>
-                
-                <div class="tarjeta-servicio tarjeta-7">
-                    <h3>Internet Super Mega</h3>
-                    <div class="velocidad">225 MB</div>
-                    <div class="precio">₡28,900</div>
-                    <ul class="beneficios">
-                        <li><i class="fas fa-check"></i> Streaming</li>
-                        <li><i class="fas fa-check"></i> Descargas grandes</li>
-                        <li><i class="fas fa-check"></i> Instalación gratis</li>
-                    </ul>
-                    <button class="btn-contratar">Contratar</button>
-                </div>
-                
-                <div class="tarjeta-servicio tarjeta-8">
-                    <h3>Internet Hiper Mega</h3>
-                    <div class="velocidad">300 MB</div>
-                    <div class="precio">₡35,000</div>
-                    <ul class="beneficios">
-                        <li><i class="fas fa-check"></i> Descargas grandes</li>
-                        <li><i class="fas fa-check"></i> Varios streaming</li>
-                        <li><i class="fas fa-check"></i> Instalación gratis</li>
-                    </ul>
-                    <button class="btn-contratar">Contratar</button>
-                </div>
-                
-                <div class="tarjeta-servicio tarjeta-9 destacado">
-                    <div class="etiqueta-promo">Premium</div>
-                    <h3>Internet Hyper</h3>
-                    <div class="velocidad">500 MB</div>
-                    <div class="precio">₡50,000</div>
-                    <ul class="beneficios">
-                        <li><i class="fas fa-check"></i> Conexión avanzada</li>
-                        <li><i class="fas fa-check"></i> Visualiza contenido Full HD y 4K</li>
-                        <li><i class="fas fa-check"></i> Instalación gratis</li>
-                    </ul>
-                    <button class="btn-contratar">Contratar</button>
-                </div>
-                
-                <div class="tarjeta-servicio tarjeta-10">
-                    <h3>Internet Ultimate</h3>
-                    <div class="velocidad">600 MB</div>
-                    <div class="precio">₡60,000</div>
-                    <ul class="beneficios">
-                        <li><i class="fas fa-check"></i> Conexión avanzada</li>
-                        <li><i class="fas fa-check"></i> Visualiza contenido Full HD y 4K</li>
-                        <li><i class="fas fa-check"></i> Instalación gratis</li>
-                    </ul>
-                    <button class="btn-contratar">Contratar</button>
-                </div>
-            </div>
-            
-            <h3 style="text-align: center; color: var(--azul); margin: 40px 0 20px;">Paquetes de Televisión + Internet</h3>
-            <div class="contenedor-servicios">
-                <!-- Tarjetas individuales para paquetes TV + Internet -->
-                <div class="tarjeta-servicio tarjeta-1">
-                    <h3>Básico + TV</h3>
-                    <div class="velocidad">10 MB + TV</div>
-                    <div class="precio">₡17,500</div>
-                    <ul class="beneficios">
-                        <li><i class="fas fa-check"></i> +80 Canales análogo</li>
-                        <li><i class="fas fa-check"></i> +50 Canales digitales</li>
-                        <li><i class="fas fa-wifi"></i> Equipo WIFI</li>
-                    </ul>
-                    <button class="btn-contratar">Contratar</button>
-                </div>
-                
-                <div class="tarjeta-servicio tarjeta-2">
-                    <h3>Estándar + TV</h3>
-                    <div class="velocidad">20 MB + TV</div>
-                    <div class="precio">₡19,000</div>
-                    <ul class="beneficios">
-                        <li><i class="fas fa-check"></i> +80 Canales análogo</li>
-                        <li><i class="fas fa-check"></i> +50 Canales digitales</li>
-                        <li><i class="fas fa-wifi"></i> Equipo WIFI</li>
-                    </ul>
-                    <button class="btn-contratar">Contratar</button>
-                </div>
-                
-                <div class="tarjeta-servicio tarjeta-3 destacado">
-                    <div class="etiqueta-promo">Oferta</div>
-                    <h3>Avanzado + TV</h3>
-                    <div class="velocidad">30 MB + TV</div>
-                    <div class="precio">₡21,900</div>
-                    <ul class="beneficios">
-                        <li><i class="fas fa-check"></i> +80 Canales análogo</li>
-                        <li><i class="fas fa-check"></i> +50 Canales digitales</li>
-                        <li><i class="fas fa-wifi"></i> Equipo WIFI</li>
-                    </ul>
-                    <button class="btn-contratar">Contratar</button>
-                </div>
-                
-                <div class="tarjeta-servicio tarjeta-4">
-                    <h3>Premium + TV</h3>
-                    <div class="velocidad">50 MB + TV</div>
-                    <div class="precio">₡23,900</div>
-                    <ul class="beneficios">
-                        <li><i class="fas fa-check"></i> +80 Canales análogo</li>
-                        <li><i class="fas fa-check"></i> +50 Canales digitales</li>
-                        <li><i class="fas fa-wifi"></i> Equipo WIFI</li>
-                    </ul>
-                    <button class="btn-contratar">Contratar</button>
-                </div>
-                
-                <div class="tarjeta-servicio tarjeta-5">
-                    <h3>Ultra + TV</h3>
-                    <div class="velocidad">75 MB + TV</div>
-                    <div class="precio">₡25,900</div>
-                    <ul class="beneficios">
-                        <li><i class="fas fa-check"></i> +80 Canales análogo</li>
-                        <li><i class="fas fa-check"></i> +50 Canales digitales</li>
-                        <li><i class="fas fa-wifi"></i> Equipo WIFI</li>
-                    </ul>
-                    <button class="btn-contratar">Contratar</button>
-                </div>
-                
-                <div class="tarjeta-servicio tarjeta-6 destacado">
-                    <div class="etiqueta-promo">Popular</div>
-                    <h3>Mega + TV</h3>
-                    <div class="velocidad">150 MB + TV</div>
-                    <div class="precio">₡27,000</div>
-                    <ul class="beneficios">
-                        <li><i class="fas fa-check"></i> +80 Canales análogo</li>
-                        <li><i class="fas fa-check"></i> +50 Canales digitales</li>
-                        <li><i class="fas fa-wifi"></i> Equipo WIFI</li>
-                    </ul>
-                    <button class="btn-contratar">Contratar</button>
-                </div>
-                
-                <div class="tarjeta-servicio tarjeta-7">
-                    <h3>Giga + TV</h3>
-                    <div class="velocidad">225 MB + TV</div>
-                    <div class="precio">₡29,900</div>
-                    <ul class="beneficios">
-                        <li><i class="fas fa-check"></i> +80 Canales análogo</li>
-                        <li><i class="fas fa-check"></i> +50 Canales digitales</li>
-                        <li><i class="fas fa-wifi"></i> Equipo WIFI</li>
-                    </ul>
-                    <button class="btn-contratar">Contratar</button>
-                </div>
-                
-                <div class="tarjeta-servicio tarjeta-8">
-                    <h3>Super Giga + TV</h3>
-                    <div class="velocidad">300 MB + TV</div>
-                    <div class="precio">₡35,000</div>
-                    <ul class="beneficios">
-                        <li><i class="fas fa-check"></i> +80 Canales análogo</li>
-                        <li><i class="fas fa-check"></i> +50 Canales digitales</li>
-                        <li><i class="fas fa-wifi"></i> Equipo WIFI</li>
-                    </ul>
-                    <button class="btn-contratar">Contratar</button>
-                </div>
-                
-                <div class="tarjeta-servicio tarjeta-9 destacado">
-                    <div class="etiqueta-promo">Exclusivo</div>
-                    <h3>Hyper + TV</h3>
-                    <div class="velocidad">500 MB + TV</div>
-                    <div class="precio">₡50,000</div>
-                    <ul class="beneficios">
-                        <li><i class="fas fa-check"></i> +80 Canales análogo</li>
-                        <li><i class="fas fa-check"></i> +50 Canales digitales</li>
-                        <li><i class="fas fa-wifi"></i> Equipo WIFI</li>
-                    </ul>
-                    <button class="btn-contratar">Contratar</button>
-                </div>
-                
-                <div class="tarjeta-servicio tarjeta-10">
-                    <h3>Ultimate + TV</h3>
-                    <div class="velocidad">600 MB + TV</div>
-                    <div class="precio">₡60,000</div>
-                    <ul class="beneficios">
-                        <li><i class="fas fa-check"></i> +80 Canales análogo</li>
-                        <li><i class="fas fa-check"></i> +50 Canales digitales</li>
-                        <li><i class="fas fa-wifi"></i> Equipo WIFI</li>
-                    </ul>
-                    <button class="btn-contratar">Contratar</button>
-                </div>
-            </div>
-        </section>
-
         <section id="promociones">
             <h2>Promociones Especiales</h2>
-            
             <div class="contenedor-servicios">
-                <!-- Promoción 1 -->
                 <div class="tarjeta-servicio tarjeta-1 destacado">
                     <div class="etiqueta-promo">Limitado</div>
                     <h3>Cable Gratis 20MB</h3>
@@ -719,7 +461,6 @@
                     <button class="btn-contratar">Aprovechar Oferta</button>
                 </div>
                 
-                <!-- Promoción 2 -->
                 <div class="tarjeta-servicio tarjeta-2 destacado">
                     <div class="etiqueta-promo">Especial</div>
                     <h3>Cable Gratis 30MB</h3>
@@ -733,7 +474,6 @@
                     <button class="btn-contratar">Aprovechar Oferta</button>
                 </div>
                 
-                <!-- Promoción 3 -->
                 <div class="tarjeta-servicio tarjeta-3 destacado">
                     <div class="etiqueta-promo">Oferta</div>
                     <h3>Cable Gratis 50MB</h3>
@@ -747,7 +487,6 @@
                     <button class="btn-contratar">Aprovechar Oferta</button>
                 </div>
                 
-                <!-- Promoción 4 -->
                 <div class="tarjeta-servicio tarjeta-4 destacado">
                     <div class="etiqueta-promo">Exclusivo</div>
                     <h3>Solo Internet 50MB</h3>
@@ -761,7 +500,6 @@
                     <button class="btn-contratar">Aprovechar Oferta</button>
                 </div>
                 
-                <!-- Promoción 5 -->
                 <div class="tarjeta-servicio tarjeta-5 destacado">
                     <div class="etiqueta-promo">Recomendado</div>
                     <h3>Solo Internet 150MB</h3>
@@ -775,7 +513,8 @@
                     <button class="btn-contratar">Aprovechar Oferta</button>
                 </div>
 
-                         <div class="tarjeta-servicio tarjeta-6 destacado">
+                <!-- Nueva Promoción -->
+                <div class="tarjeta-servicio tarjeta-6 destacado">
                     <div class="etiqueta-promo">Nuevo</div>
                     <h3>Oferta Especial 150MB + TV</h3>
                     <div class="velocidad">150 MB + TV</div>
@@ -792,7 +531,6 @@
 
         <section id="contactanos">
             <h2>Contáctanos</h2>
-            
             <div class="info-contacto">
                 <div class="tarjeta-contacto">
                     <i class="fas fa-phone-alt"></i>
@@ -821,65 +559,64 @@
                     <i class="fas fa-map"></i>
                     <h3>Ubicación</h3>
                     <p><a href="https://maps.app.goo.gl/VLgr9GH32wvAeTVx6" target="_blank">Ver en Google Maps</a></p>
-                    <p>Horario: L-S 8am-6pm</p>
-                    <p>Domingos: Cerrado</p>
+                    <p>Horario: L-V 8am-5pm</p>
+                    <p>Sábados 9am-12md</p>
                 </div>
             </div>
         </section>
 
-       <section id="contacto">
-    <h2>Formulario de Contacto</h2>
-    
-    <div id="info-paquete" class="hidden paquete-seleccionado">
-        <h4>Estás interesado en:</h4>
-        <p id="paquete-info"></p>
-    </div>
-    
-    <form id="formulario-contacto" action="https://formsubmit.co/efren.cableplus@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="Nueva solicitud de CablePlus">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" id="paquete" name="paquete">
-        <input type="hidden" name="_next" value="https://elmerof.github.io/Cable-Plus/gracias.html?success=true">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="_honey" style="display:none">
-        
-        <label for="nombre">Nombre completo:</label>
-        <input type="text" id="nombre" name="nombre" required>
-        
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" required>
-        
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="direccion">Dirección para instalación:</label>
-        <input type="text" id="direccion" name="direccion" required>
-        
-        <label for="mensaje">Mensaje adicional:</label>
-        <textarea id="mensaje" name="mensaje" rows="4"></textarea>
-        
-        <button type="submit">Enviar solicitud</button>
-    </form>
-</section>
+        <section id="contacto">
+            <h2>Formulario de Contacto</h2>
+            <div id="info-paquete" class="hidden paquete-seleccionado">
+                <h4>Estás interesado en:</h4>
+                <p id="paquete-info"></p>
+            </div>
+            
+            <form id="formulario-contacto" action="https://formsubmit.co/efren.cableplus@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Nueva solicitud de CablePlus">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" id="paquete" name="paquete">
+                <input type="hidden" name="_next" value="https://elmerof.github.io/Cable-Plus/gracias.html?success=true">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="_honey" style="display:none">
+                
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="direccion">Dirección para instalación:</label>
+                <input type="text" id="direccion" name="direccion" required>
+                
+                <label for="mensaje">Mensaje adicional:</label>
+                <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+                
+                <button type="submit">Enviar solicitud</button>
+            </form>
+        </section>
 
-         <footer>
+        <footer>
             <p>&copy; 2025 CablePlus - Todos los derechos reservados.</p>
         </footer>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Header flotante dinámico
             const header = document.querySelector('header');
             const body = document.querySelector('body');
             
+            // Efecto de scroll en header
             window.addEventListener('scroll', function() {
                 if (window.scrollY > 100) {
                     header.classList.add('header-scroll');
-                    body.style.paddingTop = '90px';
+                    body.style.paddingTop = window.innerWidth <= 768 ? '120px' : '90px';
                 } else {
                     header.classList.remove('header-scroll');
-                    body.style.paddingTop = '110px';
+                    body.style.paddingTop = window.innerWidth <= 768 ? '140px' : '110px';
                 }
             });
 
@@ -888,16 +625,17 @@
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
                     const target = document.querySelector(this.getAttribute('href'));
+                    const headerHeight = header.offsetHeight;
+                    
                     window.scrollTo({
-                        top: target.offsetTop - 100,
+                        top: target.offsetTop - headerHeight,
                         behavior: 'smooth'
                     });
                 });
             });
 
-            // Manejo de formulario
+            // Manejo de botones contratar
             const botonesContratar = document.querySelectorAll('.btn-contratar');
-            
             botonesContratar.forEach(boton => {
                 boton.addEventListener('click', function(e) {
                     e.preventDefault();
