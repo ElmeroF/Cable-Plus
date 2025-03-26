@@ -23,7 +23,6 @@
             padding-top: 110px;
         }
 
-        /* HEADER FIJADO PARA TODOS LOS DISPOSITIVOS */
         header {
             position: fixed;
             top: 0;
@@ -362,34 +361,67 @@
 
         @media (max-width: 768px) {
             body {
-                padding-top: 140px;
+                padding-top: 100px;
             }
             
             header {
-                flex-direction: column;
-                text-align: center;
+                flex-direction: row;
+                flex-wrap: wrap;
                 padding: 10px 5%;
+                align-items: center;
             }
             
             header h1 {
-                font-size: 2em;
-                margin: 10px 0;
+                font-size: 1.5em;
+                margin: 0 10px;
+                order: 2;
+                flex-grow: 1;
+                text-align: left;
+                animation: none;
+            }
+            
+            header img {
+                height: 50px;
+                order: 1;
+                padding: 5px;
+                margin-right: 10px;
+            }
+            
+            nav {
+                width: 100%;
+                order: 3;
+                margin-top: 10px;
             }
             
             nav ul {
-                flex-direction: column;
-                gap: 15px;
-                margin-top: 15px;
+                flex-direction: row;
+                gap: 8px;
+                margin-top: 0;
+                flex-wrap: wrap;
+                justify-content: center;
             }
             
             nav ul li a {
-                padding: 8px 12px;
-                font-size: 0.9em;
+                padding: 6px 10px;
+                font-size: 0.8em;
             }
             
+            .header-scroll {
+                padding: 5px 5% !important;
+            }
+            
+            .header-scroll img {
+                height: 40px !important;
+                padding: 3px;
+            }
+            
+            .header-scroll h1 {
+                font-size: 1.3em !important;
+                margin: 0 8px;
+            }
+
             .contenedor-servicios {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                gap: 20px;
+                grid-template-columns: 1fr;
             }
             
             .tarjeta-servicio {
@@ -414,7 +446,7 @@
 <body>
     <div id="pagina-principal">
         <header>
-            <img src="imagenes/logo.png" alt="CablePlus Logo" style="height: 80px;">
+            <img src="imagenes/logo.png" alt="CablePlus Logo">
             <h1>CablePlus</h1>
             <nav>
                 <ul>
@@ -600,7 +632,7 @@
         </section>
 
         <footer>
-            <p>&copy; 2025 CablePlus - Todos los derechos reservados.</p>
+            <p>&copy; 2025 CablePlus S.R.L - Todos los derechos reservados.</p>
         </footer>
     </div>
 
@@ -609,18 +641,16 @@
             const header = document.querySelector('header');
             const body = document.querySelector('body');
             
-            // Efecto de scroll en header
             window.addEventListener('scroll', function() {
-                if (window.scrollY > 100) {
+                if (window.scrollY > 50) {
                     header.classList.add('header-scroll');
-                    body.style.paddingTop = window.innerWidth <= 768 ? '120px' : '90px';
+                    body.style.paddingTop = window.innerWidth <= 768 ? '80px' : '90px';
                 } else {
                     header.classList.remove('header-scroll');
-                    body.style.paddingTop = window.innerWidth <= 768 ? '140px' : '110px';
+                    body.style.paddingTop = window.innerWidth <= 768 ? '100px' : '110px';
                 }
             });
 
-            // Scroll suave
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -634,7 +664,6 @@
                 });
             });
 
-            // Manejo de botones contratar
             const botonesContratar = document.querySelectorAll('.btn-contratar');
             botonesContratar.forEach(boton => {
                 boton.addEventListener('click', function(e) {
