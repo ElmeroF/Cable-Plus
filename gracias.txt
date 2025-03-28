@@ -3,224 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gracias - CablePlus</title>
+    <title>¡Bienvenido a la familia CablePlus!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         :root {
             --verde: #4CAF50;
             --azul: #2196F3;
             --naranja: #FF9800;
-            --morado: #9C27B0;
-            --degradado-header: linear-gradient(135deg, #4CAF50 0%, #2196F3 100%);
+            --degradado: linear-gradient(135deg, #4CAF50 0%, #2196F3 100%);
         }
-
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            background: #f8f9fa;
-            color: #333;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        header {
-            background: var(--degradado-header);
-            color: white;
-            padding: 15px 5%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1));
-            transform: rotate(45deg);
-            pointer-events: none;
-        }
-
-        header img {
-            height: 80px;
-            background: white;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
-        }
-
-        header img:hover {
-            transform: scale(1.05);
-        }
-
-        header h1 {
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            margin: 0 20px;
-            flex-grow: 1;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
             margin: 0;
             padding: 0;
+            background: #f8f9fa;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 10px 15px;
-            border-radius: 30px;
-            transition: all 0.3s ease;
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
         }
-
-        nav ul li a:hover {
-            background: rgba(255,255,255,0.15);
-            transform: translateY(-2px);
-        }
-
-        /* Estilos para la página de agradecimiento */
-        .gracias-container {
-            max-width: 600px;
-            margin: 50px auto;
+        
+        .contenedor-gracias {
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            max-width: 700px;
+            width: 90%;
             text-align: center;
-            padding: 40px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            animation: aparecer 1s ease-out;
-            flex-grow: 1;
+            animation: aparecer 0.8s ease-out;
+            transform-style: preserve-3d;
+            perspective: 1000px;
         }
-
+        
         @keyframes aparecer {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from { 
+                opacity: 0;
+                transform: translateY(30px) rotateX(20deg);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0) rotateX(0);
+            }
         }
-
-        .gracias-container i {
-            font-size: 5em;
+        
+        .icono-gracias {
+            font-size: 5rem;
             color: var(--verde);
             margin-bottom: 20px;
-            animation: agradecimiento 1s ease;
+            animation: latido 1.5s infinite;
         }
-
-        @keyframes agradecimiento {
-            0% { transform: scale(0.5); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
+        
+        @keyframes latido {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
-
-        .gracias-container h2 {
+        
+        h1 {
             color: var(--azul);
+            font-size: 2.5rem;
             margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
         }
-
-        .gracias-container p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            color: #555;
+        
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
-
+        
+        .destacado {
+            font-weight: bold;
+            color: var(--azul);
+            font-size: 1.3rem;
+        }
+        
+        .familia {
+            display: inline-block;
+            background: var(--degradado);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin: 15px 0;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+        }
+        
         .btn-volver {
             display: inline-block;
-            background: var(--degradado-header);
+            background: var(--degradado);
             color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
+            padding: 15px 40px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
+            margin-top: 30px;
             transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: none;
+            cursor: pointer;
         }
-
+        
         .btn-volver:hover {
-            opacity: 0.9;
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, #3d8b40 0%, #0d8aee 100%);
         }
-
-        footer {
-            background: var(--degradado-header);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: auto;
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: var(--azul);
+            opacity: 0;
+            z-index: 10;
+            animation: confetti 5s ease-in-out infinite;
         }
-
+        
+        @keyframes confetti {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(500px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                text-align: center;
+            .contenedor-gracias {
+                padding: 30px 20px;
             }
             
-            nav ul {
-                flex-direction: column;
-                gap: 15px;
-                margin-top: 15px;
+            h1 {
+                font-size: 2rem;
             }
             
-            .gracias-container {
-                margin: 20px;
-                padding: 20px;
+            p {
+                font-size: 1.1rem;
+            }
+            
+            .icono-gracias {
+                font-size: 4rem;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="imagenes/logo.png" alt="CablePlus Logo">
-        <h1>CablePlus</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="gracias-container">
-        <i class="fas fa-check-circle"></i>
-        <h2>¡Gracias por preferir CablePlus!</h2>
-        <p>Hemos recibido tu solicitud correctamente. Uno de nuestros asesores se pondrá en contacto contigo en las próximas 24 horas para confirmar los detalles de tu servicio.</p>
-        <p>¡Estamos emocionados de tenerte como parte de nuestra comunidad CablePlus!</p>
-        <a href="index.html" class="btn-volver">Volver al inicio</a>
+    <div class="overlay"></div>
+    
+    <div class="contenedor-gracias">
+        <div class="icono-gracias">
+            <i class="fas fa-heart"></i>
+        </div>
+        
+        <h1>¡Bienvenido a la familia CablePlus!</h1>
+        
+        <div class="familia">
+            #FamiliaCablePlus
+        </div>
+        
+        <p>¡Estamos emocionados de tenerte con nosotros!</p>
+        
+        <p class="destacado">Tu solicitud ha sido recibida con éxito y estamos trabajando en ella.</p>
+        
+        <p>En menos de 24 horas recibirás una llamada de nuestro equipo para coordinar todos los detalles y darte la mejor bienvenida a nuestra comunidad.</p>
+        
+        <p>Mientras tanto, si tienes alguna pregunta urgente, no dudes en contactarnos al <strong>2716-6000</strong> o por WhatsApp al <strong>7275-6074</strong>.</p>
+        
+        <p>¡Prepárate para disfrutar de la mejor conexión y entretenimiento!</p>
+        
+        <a href="index.html" class="btn-volver">
+            <i class="fas fa-home"></i> Volver al inicio
+        </a>
     </div>
-
-    <footer>
-        <p>&copy; 2025 CablePlus - Todos los derechos reservados.</p>
-    </footer>
-
+    
     <script>
-        // Verificar si se llegó aquí desde el formulario
-        document.addEventListener('DOMContentLoaded', function() {
-            // Esperar 2 segundos para asegurar que todo esté cargado
-            setTimeout(function() {
-                const urlParams = new URLSearchParams(window.location.search);
-                const success = urlParams.get('success');
-                
-                if(document.referrer.indexOf("index.html") === -1 && !success) {
-                    // Redirigir al inicio si no viene del formulario
-                    window.location.href = "index.html";
-                }
-                
-                // Mostrar mensaje de éxito si viene del formulario
-                if(success) {
-                    const container = document.querySelector('.gracias-container');
-                    const successMessage = document.createElement('div');
-                    successMessage.innerHTML = '<p style="color: var(--verde); font-weight: bold;">✔ Formulario enviado con éxito</p>';
-                    container.insertBefore(successMessage, container.firstChild);
-                }
-            }, 2000);
-        });
+        // Crear confeti
+        function crearConfetti() {
+            const colores = ['#4CAF50', '#2196F3', '#FF9800', '#9C27B0', '#E91E63'];
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.backgroundColor = colores[Math.floor(Math.random() * colores.length)];
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.top = -10 + 'px';
+                confetti.style.width = Math.random() * 10 + 5 + 'px';
+                confetti.style.height = Math.random() * 10 + 5 + 'px';
+                confetti.style.animationDelay = Math.random() * 5 + 's';
+                confetti.style.animationDuration = Math.random() * 3 + 3 + 's';
+                document.body.appendChild(confetti);
+            }
+        }
+        
+        // Ejecutar cuando se cargue la página
+        window.onload = function() {
+            crearConfetti();
+            
+            // Mostrar mensaje especial si viene del formulario
+            const urlParams = new URLSearchParams(window.location.search);
+            if(urlParams.has('success')) {
+                // Animación adicional
+                const icono = document.querySelector('.icono-gracias');
+                icono.style.animation = 'latido 1.5s infinite, giro 2s 1';
+            }
+        };
     </script>
 </body>
 </html>
